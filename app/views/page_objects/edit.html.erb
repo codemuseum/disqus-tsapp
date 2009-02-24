@@ -1,0 +1,43 @@
+<% stylesheets 'disqus', 'disqus-edit' %>
+<% javascripts 'disqus-edit' %>
+
+<div>
+  <div>These DISQUS settings apply to all of the discuss threads on your site, not just the one on this page.</div>
+<% fields_for_page_object do |f| %>
+  <% fields_for "#{f.object_name}[settings]", f.object.setup || Setup.new_default do |sf| -%>
+    <div class="edited-value">
+      <div>
+        <%= sf.label :account, "Disqus Shortname (Community Page)" %>
+        <%= sf.text_field :account %>.disqus.com
+      </div>
+
+      <div>
+        <%= sf.label :api_key, "Disqus API Key (Optional)" %>
+        <%= sf.text_field :api_key %>
+      </div>
+
+      <div>
+        <%= sf.label :avatar_size %>
+        <%= sf.select :avatar_size, Disqus::Widget::VALID_AVATAR_SIZES %>
+      </div>
+
+      <div>
+        <%= sf.label :color %>
+        <%= sf.select :color, Disqus::Widget::VALID_COLORS %>
+      </div>
+
+      <div>
+        <%= sf.label :num_items %>
+        <%= sf.select :num_items, Disqus::Widget::VALID_NUM_ITEMS %>
+      </div>
+
+      <div>
+        <%= sf.label :show_powered_by %>
+        <%= sf.select :show_powered_by, [['Yes', true], ['No', false]] %>
+      </div>
+    </div>
+
+    <%= sf.hidden_field :edited_setup %>
+  <% end %>
+<% end %>
+</div>

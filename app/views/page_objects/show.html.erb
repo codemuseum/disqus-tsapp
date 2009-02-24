@@ -1,0 +1,8 @@
+<% stylesheets 'disqus' %>
+<% javascripts 'disqus' %>
+
+<div class="<%= @page_object.setup? ? "disqus-account-#{h(@page_object.setup.account)}" :  'no-disqussion'  %>">
+<% if @page_object.setup? %>
+  <%= disqus_thread(@page_object.setup.build_options) %>
+<% end %>
+</div>

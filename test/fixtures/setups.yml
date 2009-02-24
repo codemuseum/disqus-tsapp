@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  site_uid: MyString
+  account: MyString
+  api_key: MyString
+  avatar_size: 1
+  color: MyString
+  num_items: 1
+  show_powered_by: false
+
+two:
+  site_uid: MyString
+  account: MyString
+  api_key: MyString
+  avatar_size: 1
+  color: MyString
+  num_items: 1
+  show_powered_by: false
