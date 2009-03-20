@@ -1,2 +1,2 @@
-body.displaying-page.action-edit .app-disqus div.no-disqussion { height:20px; border:1px dotted gray;}
+body.displaying-page.action-edit .app-disqus div.no-disqussion { height:40px; border:1px dotted gray;background:transparent url(../images/disqussionless.png) center center no-repeat;}
 .app-disqus {margin-top:20px;margin-bottom:20px;}
